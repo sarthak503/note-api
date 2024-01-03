@@ -1,6 +1,8 @@
+
 const express = require('express');
 const router = express.Router();
 const Note = require('../models/notes_schema');
+const { body, validationResult } = require('express-validator');
 
 router.get('/', async (req, res) => {
   try {
@@ -14,7 +16,6 @@ router.get('/', async (req, res) => {
 router.get('/:id', getNote, (req, res) => {
   res.json(res.note);
 });
-
 
 router.post('/', [
   body('title').isLength({ min: 1, max: 100 }).withMessage('Title is required and should be between 1 to 100 characters'),
@@ -82,3 +83,4 @@ async function getNote(req, res, next) {
 }
 
 module.exports = router;
+

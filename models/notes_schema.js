@@ -4,15 +4,15 @@ const noteSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    maxlength: 100,
+    maxlength: 100, 
   },
   content: {
     type: String,
     required: true,
-    maxlength: 1000,
+    maxlength: 1000, 
   },
   createdAt: {
-    type: String,
+    type: String, 
     default: () => {
       const date = new Date().toLocaleString('en-US', {
         timeZone: 'Asia/Kolkata',
@@ -28,7 +28,7 @@ const noteSchema = new mongoose.Schema({
     },
   },
   updatedAt: {
-    type: String,
+    type: String, 
     default: () => {
       const date = new Date().toLocaleString('en-US', {
         timeZone: 'Asia/Kolkata',
