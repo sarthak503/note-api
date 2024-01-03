@@ -22,15 +22,21 @@ To run this API locally, follow these steps:
     ```bash
     cd note-taking-api
     npm install
+    npm i express, express-validator,mongodb,mongoose,dotenv
 
 3. Set up environment variables:
     ```bash
-   - Create a .env file based on .env.example.
-   - Add your MongoDB URI as DB_URI in the .env file.
+   * Create a .env file based on .env.example.
+   * Add your MongoDB URI as DB_URI in the .env file.
 
 4. Start the server:
     ```bash 
-    npm start
+    node index.js
+
+5. Run test suites :
+    ```bash
+    npm install jest supertest --save-dev
+    npx jest
 
 ## API Endpoints
 
@@ -44,6 +50,8 @@ The API endpoints are as follows:
 
 For detailed API documentation, refer to [API Documentation](API_Docs.md)
 
+
+
 ## Technologies Used
 * Node.js
 * Express.js
@@ -56,4 +64,4 @@ For detailed API documentation, refer to [API Documentation](API_Docs.md)
 Sarthak Kumar
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
